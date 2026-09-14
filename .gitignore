@@ -63,3 +63,6 @@ key.properties
 
 # Local model export workspace (ONNX/PT intermediates)
 tool/card_model/
+
+# Local APK copies (GitHub Releases is the download)
+dist/

@@ -5,6 +5,12 @@ All notable changes to Crib Score Trainer are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] — 2026-09-14
+
+### Changed
+
+- Replaced the default Flutter launcher icon with the cribbage-board logo on Android, iOS, web, and Windows.
+
 ## [0.1.1] — 2026-09-14
 
 ### Added
