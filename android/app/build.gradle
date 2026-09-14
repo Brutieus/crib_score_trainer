@@ -1,0 +1,46 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.cribscoretrainer.crib_score_trainer"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    defaultConfig {
+        applicationId = "com.cribscoretrainer.crib_score_trainer"
+        // Camera2 + TFLite/NNAPI. image_picker and tflite_flutter need API 26+.
+        minSdk = 26
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // Debug keys so `flutter run --release` works without a store keystore.
+            // Do not commit a real .jks or key.properties.
+            signingConfig = signingConfigs.debug
+        }
+    }
+
+    androidResources {
+        noCompress += "tflite"
+    }
+}
+
+flutter {
+    source = "../.."
+}
