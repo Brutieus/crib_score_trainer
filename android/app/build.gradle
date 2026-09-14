@@ -30,9 +30,10 @@ android {
 
     buildTypes {
         release {
-            // Debug keys so `flutter run --release` works without a store keystore.
+            // Debug keys so sideload testing works without a Play keystore.
             // Do not commit a real .jks or key.properties.
             signingConfig = signingConfigs.debug
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
     }
 
