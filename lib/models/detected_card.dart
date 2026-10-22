@@ -35,7 +35,7 @@ class DetectionResult {
   );
 }
 
-enum ModelKind { missing, placeholder, ready, failed }
+enum ModelKind { missing, placeholder, ready, failed, browser }
 
 class ModelStatus {
   const ModelStatus({
@@ -60,6 +60,9 @@ class ModelStatus {
         return 'Could not load the card model — use tap-to-fix / Enter cards. $detail';
       case ModelKind.ready:
         return 'On-device detector ready. Wrong card? Tap it to fix.';
+      case ModelKind.browser:
+        return 'In the browser, card detection downloads on the first photo '
+            '(about 40 MB), then stays cached. You can always enter cards by hand.';
     }
   }
 }

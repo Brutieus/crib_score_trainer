@@ -1,5 +1,4 @@
-import 'dart:typed_data';
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -85,6 +84,9 @@ class _CaptureScreenState extends State<CaptureScreen> {
   }
 
   Future<bool> _ensurePermission(ImageSource source) async {
+    // The browser file picker and camera prompt are the permission step.
+    // permission_handler rejects photo access on the web before that opens.
+    if (kIsWeb) return true;
     try {
       final permission =
           source == ImageSource.camera ? Permission.camera : Permission.photos;

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../detection/card_detector.dart';
@@ -37,10 +38,14 @@ class _HomeScreenState extends State<HomeScreen> {
           return ListView(
             padding: const EdgeInsets.all(20),
             children: [
-              const Text(
-                'Offline cribbage hand & crib scorer, plus a rules trainer. '
-                'Works in airplane mode. No accounts, no API keys, no network calls.',
-                style: TextStyle(
+              Text(
+                kIsWeb
+                    ? 'Offline cribbage hand and crib scorer, plus a rules trainer. '
+                        'No accounts and no API keys. The first photo downloads the '
+                        'card detector from this site. The photo itself is not uploaded.'
+                    : 'Offline cribbage hand & crib scorer, plus a rules trainer. '
+                        'Works in airplane mode. No accounts, no API keys, no network calls.',
+                style: const TextStyle(
                     color: CribColors.cream, height: 1.4, fontSize: 16),
               ),
               const SizedBox(height: 16),

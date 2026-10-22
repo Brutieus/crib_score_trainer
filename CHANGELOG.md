@@ -5,6 +5,12 @@ All notable changes to Crib Score Trainer are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] — 2026-10-22
+
+### Added
+
+- Browser app at `https://brutieus.github.io/crib_score_trainer/`. No install. Camera and gallery photos run the YOLOv8n detector in the page (ONNX Runtime Web), then the same review and scoring screens. The model downloads from this site on the first photo and stays cached.
+
 ## [0.1.2] — 2026-09-14
 
 ### Changed

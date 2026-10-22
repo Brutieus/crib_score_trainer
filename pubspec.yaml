@@ -1,7 +1,7 @@
 name: crib_score_trainer
 description: Offline cribbage hand and crib scorer with on-device card detection and a rules trainer.
 publish_to: "none"
-version: 0.1.2+3
+version: 0.2.0+4
 
 environment:
   sdk: ^3.6.1

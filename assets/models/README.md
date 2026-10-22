@@ -12,7 +12,9 @@ Files in this folder:
 
 `cards.tflite` is a **real** network, not a placeholder. It is YOLOv8n fine-tuned on the public Roboflow / Kaggle-style 52-class playing-card detection set (same class order as [geaxgx-style](https://github.com/geaxgx/playing-card-detection) codes, uppercase). Source checkpoint: [mustafakemal0146/playing-cards-yolov8](https://huggingface.co/mustafakemal0146/playing-cards-yolov8) (YOLOv8n, 50 epochs, imgsz 640). Converted ONNX → TFLite with onnx2tf because Ultralytics LiteRT export is Linux/macOS-only.
 
-The app **never downloads weights at runtime**. Airplane mode still applies.
+The phone and desktop apps **never download weights at runtime**. Airplane mode still applies there.
+
+The browser build does not use this TFLite file. It runs `web/models/cards.onnx` (the same YOLOv8n export) with ONNX Runtime Web, loaded from the site on the first photo.
 
 ## Licenses for the weights
 
