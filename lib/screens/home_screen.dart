@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Text(
                 kIsWeb
-                    ? 'Offline cribbage hand and crib scorer, plus a rules trainer. '
+                    ? 'Cribbage hand and crib scorer, plus a rules trainer. '
                         'No accounts and no API keys. The first photo downloads the '
                         'card detector from this site. The photo itself is not uploaded.'
                     : 'Offline cribbage hand & crib scorer, plus a rules trainer. '
